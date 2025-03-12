@@ -1,15 +1,39 @@
-import { Button, Flex } from "antd";
+import { Button } from "antd";
 import React, { useState } from "react";
-import Link from "next/link"; 
+import Link from "next/link";
 import InputField from "./InputField";
-import "./LoginForm.model.css";  
+import "./LoginForm.model.css";
+import { useRouter } from "next/router"; // Điều hướng sau khi đăng nhập
+
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const router = useRouter(); // Sử dụng để điều hướng trang
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Đăng nhập với:", { email, password });
+    setMessage(""); // Xóa thông báo trước đó
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("token", data.token); // Lưu token vào localStorage
+        setMessage("Đăng nhập thành công!");
+        router.push("/dashboard"); // Chuyển hướng sau khi đăng nhập
+      } else {
+        setMessage(data.message);
+      }
+    } catch (error) {
+      setMessage("Lỗi kết nối đến server");
+    }
   };
 
   return (
@@ -31,29 +55,29 @@ const LoginForm = () => {
         </Link>
       </p>
       <form onSubmit={handleSubmit} className="login-form">
-      <InputField
-        label="Tên đăng nhập/email"
-        type="email"
-        name="email"  // Thêm dòng này
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Nhập email của bạn"
-      />
-      <InputField
-        label="Mật khẩu"
-        type="password"
-        name="password"  // Thêm dòng này
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Nhập mật khẩu"
-      />
+        <InputField
+          label="Tên đăng nhập/email"
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Nhập email của bạn"
+        />
+        <InputField
+          label="Mật khẩu"
+          type="password"
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Nhập mật khẩu"
+        />
         <Button type="primary" htmlType="submit" className="btn-login">
           Đăng nhập
         </Button>
+        {message && <p className="error-message">{message}</p>}
       </form>
     </div>
   );
 };
 
 export default LoginForm;
-
