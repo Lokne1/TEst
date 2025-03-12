@@ -2,10 +2,10 @@
     max-width: 530px;
     margin: 30px auto;
     padding: 100px;
-    background: #121212; /* Màu nền tối */
+    background: #121212; 
     border-radius: 30px;
     text-align: center;
-    color: #00ff99; /* Xanh neon */
+    color: #00ff99;
 }
 .logo img {
   border-radius: 20px;
@@ -50,9 +50,9 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    background: #222; /* Màu nền input tối */
+    background: #222; 
     color: #fff;
-    border: none; /* Xóa viền */
+    border: none;
     border-radius: 5px;
 }
 

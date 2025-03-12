@@ -9,8 +9,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         <main>{children}</main>
-        <Footer /> {/* Footer được thêm vào dưới phần main */}
+        <Footer />
       </body>
-    </html>//demo
+    </html>
   );
 }
