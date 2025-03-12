@@ -1,0 +1,119 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+  margin-top: -68;
+  margin-bottom: -68;
+}
+
+.register-box {
+
+  background-color: #111;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 153, 0.3);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid rgba(0, 255, 153, 0.5);
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+.register-title {
+  color: #00FF99;
+  font-weight: bold;
+  font-size: 45;
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  color: #00FF99;
+  font-size: 30;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:  60px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  color: #00FF99;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 110%; 
+  padding: 12px; 
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #222;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  font-size: 10;
+}
+
+.input-group input:focus {
+  border-color: #00FF99;
+  box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.5);
+  outline: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+.register-group{
+  color: white;
+  font-size: 18;
+}
+.checkbox-container input {
+  margin-right: 8px;
+}
+
+.register-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #00FF99, #007A66);
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.register-btn:hover {
+  background: linear-gradient(90deg, #00FF99, #005A44);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #00FF99;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,150 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #1a1a1a; 
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 127, 0.5);
+  }
+  
+  .bannerContent {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .bannerContent h2 {
+    color: #00ff7f;
+    font-size: 50px;
+  }
+  
+  .bannerContent h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+  }
+  
+  .bannerContent p {
+    font-size: 16px;
+    color: #bbb;
+  }
+  
+  .exploreButton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #00ff7f;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .exploreButton:hover {
+    background: #008f5f;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .bannerImage img {
+    border-radius: 10px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sản phẩm mỗi hàng */
+    gap: 20px;
+    justify-content: center;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 127, 0.4);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+  .time {
+    font-size: 14px;
+    color: #bbb;
+  }
+  .price {
+    font-weight: bold;
+    color: #00ff7f;
+  }
+  .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #00ff7f, #008f5f);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  .button:hover {
+    background: linear-gradient(90deg, #008f5f, #006f3f);
+    color: white;
+    transform: scale(1.05);
+  }
+  .pagination {
+    margin-top: 20px;
+  }
+  .pageButton {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #00ff7f;
+    background: black;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #00ff7f;
+    transition: 0.3s;
+  }
+  .pageButton:hover {
+    background: #00ff7f;
+    color: 00ff7f(11, 30, 22);
+  }
+  .activePage {
+    background: #00ff7f;
+    color: black;
+    border: none;
+  }
+  .scrollContainer {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  .scrollContainer::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollContainer::-webkit-scrollbar-thumb {
+    background: #00ff7f;
+    border-radius: 5px;
+  }
+  

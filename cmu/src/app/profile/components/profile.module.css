@@ -1,0 +1,172 @@
+.accountInfo {
+  flex: 1;
+  padding: 20px 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.updateButton {
+  background-color: #00e676;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.updateButton:hover {
+  background-color: #00c853;
+}
+
+.passwordButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.passwordButton:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.lockIcon {
+  font-size: 14px;
+}
+
+.formContainer {
+  background-color: #121e2d;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.formContainer h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.formRow {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+  
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.formGroup label {
+  font-size: 14px;
+  color: #a0a0a0;
+}
+
+.required {
+  color: #ff4d4f;
+  margin-right: 2px;
+}
+
+.formGroup input,
+.formGroup select {
+  background-color: #0f1824;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 12px 15px;
+  color: white;
+  width: 100%;
+}
+
+.formGroup input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.dateInput {
+  position: relative;
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.note {
+  font-size: 14px;
+  color: #ff4d4f;
+  margin-bottom: 20px;
+}
+
+.note span {
+  font-weight: 500;
+}
+
+.uploadBox {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.uploadBox:hover {
+  border-color: #00e676;
+  background-color: rgba(0, 230, 118, 0.05);
+}
+
+.uploadContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
